@@ -13,24 +13,19 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: TerraformTaskV2@2
+- task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'azuredevops-azure-tf-connection'
+    backendServiceArm: 'Azure_Azure_Dev_Ops_Connection'
     backendAzureRmResourceGroupName: 'rg-remote-state-tf'
-    backendAzureRmStorageAccountName: 'azuredevopsremotestatetf'
-    backendAzureRmContainerName: 'azuredevopsremotestatetf'
-    backendAzureRmKey: 'remotestate.tfstate'
-
-- task: TerraformTaskV2@2
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    environmentServiceNameAzureRM: 'Free Trial(d269918c-3797-49c4-b125-b1bc5815ad18)'
+    backendAzureRmStorageAccountName: 'azuredevopsremotestate'
+    backendAzureRmContainerName: 'azuredevopsremotestate'
+    backendAzureRmKey: 'LtPpT1KRtv7wGfCBGOhe63a2quymXXTNk5N9paaKC+5My81sBdXmecNNTmgtipwNImLMaDRFzwOQ+AStV2pthg=='
 
 - task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
-    command: 'destroy'
-    environmentServiceNameAzureRM: 'Free Trial(d269918c-3797-49c4-b125-b1bc5815ad18)'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'Free Trial(48e8e449-d963-4fe3-a7ca-e4add0d13d83)'
+
