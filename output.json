@@ -1,0 +1,96 @@
+{
+  "id": "/subscriptions/48e8e449-d963-4fe3-a7ca-e4add0d13d83/resourceGroups/RG-VM-MANUAL/providers/Microsoft.Compute/virtualMachines/winvm01",
+  "name": "winvm01",
+  "type": "microsoft.compute/virtualmachines",
+  "tenantId": "210eed5c-3cea-48d0-be5d-b882e73db4d1",
+  "kind": "",
+  "location": "northeurope",
+  "resourceGroup": "rg-vm-manual",
+  "subscriptionId": "48e8e449-d963-4fe3-a7ca-e4add0d13d83",
+  "managedBy": "",
+  "sku": null,
+  "plan": null,
+  "properties": {
+    "provisioningState": "Succeeded",
+    "timeCreated": "2022-10-17T15:17:00.209Z",
+    "storageProfile": {
+      "imageReference": {
+        "publisher": "MicrosoftWindowsServer",
+        "exactVersion": "17763.3532.221008",
+        "version": "latest",
+        "offer": "WindowsServer",
+        "sku": "2019-Datacenter-Core"
+      },
+      "dataDisks": [],
+      "osDisk": {
+        "name": "winvm01_OsDisk_1_5ffe7d55bd9c44f1854f8256740ca5ed",
+        "createOption": "FromImage",
+        "diskSizeGB": 127,
+        "managedDisk": {
+          "id": "/subscriptions/48e8e449-d963-4fe3-a7ca-e4add0d13d83/resourceGroups/rg-vm-manual/providers/Microsoft.Compute/disks/winvm01_OsDisk_1_5ffe7d55bd9c44f1854f8256740ca5ed",
+          "storageAccountType": "Premium_LRS"
+        },
+        "deleteOption": "Delete",
+        "osType": "Windows",
+        "caching": "ReadWrite"
+      }
+    },
+    "networkProfile": {
+      "networkInterfaces": [
+        {
+          "properties": {
+            "deleteOption": "Detach"
+          },
+          "id": "/subscriptions/48e8e449-d963-4fe3-a7ca-e4add0d13d83/resourceGroups/rg-vm-manual/providers/Microsoft.Network/networkInterfaces/winvm01967"
+        }
+      ]
+    },
+    "hardwareProfile": {
+      "vmSize": "Standard_B4ms"
+    },
+    "osProfile": {
+      "computerName": "winvm01",
+      "requireGuestProvisionSignal": true,
+      "allowExtensionOperations": true,
+      "adminUsername": "winuser",
+      "secrets": [],
+      "windowsConfiguration": {
+        "enableVMAgentPlatformUpdates": false,
+        "provisionVMAgent": true,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "patchMode": "AutomaticByOS",
+          "enableHotpatching": false
+        },
+        "enableAutomaticUpdates": true
+      }
+    },
+    "extended": {
+      "instanceView": {
+        "hyperVGeneration": "V1",
+        "computerName": "winvm01",
+        "powerState": {
+          "displayStatus": "VM running",
+          "level": "Info",
+          "code": "PowerState/running"
+        },
+        "osVersion": "10.0.17763.3532",
+        "osName": "Windows Server 2019 Datacenter"
+      }
+    },
+    "vmId": "c521f173-8159-4f79-a571-733cdfdce37f",
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": true
+      }
+    }
+  },
+  "tags": {
+    "environment": "tni",
+    "t": "infra"
+  },
+  "identity": null,
+  "zones": null,
+  "extendedLocation": null,
+  "ResourceId": "/subscriptions/48e8e449-d963-4fe3-a7ca-e4add0d13d83/resourceGroups/RG-VM-MANUAL/providers/Microsoft.Compute/virtualMachines/winvm01"
+}
